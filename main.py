@@ -1,4 +1,6 @@
 from model.keras_model import *
+import numpy as np
+import keras
 
 
 def main():
