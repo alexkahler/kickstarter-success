@@ -9,7 +9,7 @@ def main():
 
     # Create and train model
     model = create_model()
-    trained_model = train_model(model, x_train, y_train, 100, 20)
+    trained_model = train_model(model, x_train, y_train, 50, 20)
 
     # Evaluate model
     result = evaluate_model(trained_model, x_test, y_test, 20)
@@ -17,7 +17,7 @@ def main():
     print('Loss & Accuracy: ', result)
     print('Confusion Matrix:', cm)
 
-    cross_validation(X, Y, 2)
+    # cross_validation(X, Y, 2)
 
 
 if __name__ == "__main__":
