@@ -5,10 +5,8 @@ import sklearn
 
 def main():
     # Get data
-    # x_train, y_train, x_test, y_test = get_data()
-    x_train, y_train, x_test, y_test = get_slim_data()
-    X = np.concatenate((x_train, x_test))
-    Y = np.concatenate((y_train, y_test))
+    X, Y = get_data()
+    X, Y = get_slim_data()
 
     print(sorted(sklearn.metrics.SCORERS.keys()))
     # Create and train model

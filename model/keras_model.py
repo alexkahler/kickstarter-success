@@ -15,9 +15,9 @@ def get_data():
     Y = X['state']
     X = X.drop(['state'], axis=1)
     X = pd.DataFrame(scaler.fit_transform(X), columns=list(X.columns))
-    x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.20)
+    # x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.20)
 
-    return x_train, y_train, x_test, y_test
+    return X, Y
 
 
 def get_slim_data():
@@ -31,11 +31,9 @@ def get_slim_data():
            'category_food', 'category_games', 'category_journalism', 'category_music', 'category_photography',
            'category_publishing', 'category_technology', 'category_theater']]
     X = pd.DataFrame(scaler.fit_transform(X), columns=list(X.columns))
-    x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.20)
+    # x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.20)
 
-    print(X.head())
-
-    return x_train, y_train, x_test, y_test
+    return X, Y
 
 
 def create_model():
