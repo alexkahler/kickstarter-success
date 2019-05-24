@@ -6,6 +6,7 @@ from sklearn.model_selection import cross_validate
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix
 from sklearn.pipeline import Pipeline
+from keras.layers import LeakyReLU
 import pandas as pd
 
 
@@ -36,12 +37,28 @@ def get_slim_data():
     return X, Y
 
 
-def create_model():
+def create_simple_model():
     model = Sequential()
-    model.add(Dense(32, kernel_initializer='normal', activation='relu', input_dim=22))
+    model.add(Dense(32, kernel_initializer='normal', activation='relu', input_dim=83))
     model.add(Dense(32, kernel_initializer='normal', activation='relu'))
     model.add(Dropout(0.4))
     model.add(Dense(32, kernel_initializer='normal', activation='relu'))
+    model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
+    model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
+
+    return model
+
+def create_optimized_model():
+    model = Sequential()
+    model.add(Dense(512, kernel_initializer='normal', input_dim=22))
+    model.add(LeakyReLU(alpha=0.3))
+    model.add(Dropout(0.4))
+    model.add(Dense(256, kernel_initializer='normal'))
+    model.add(LeakyReLU(alpha=0.3))
+    model.add(Dropout(0.4))
+    model.add(Dense(128, kernel_initializer='normal'))
+    model.add(Dropout(0.3))
+    model.add(LeakyReLU(alpha=0.3))
     model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
@@ -67,11 +84,17 @@ def predict_model(model, x_test, y_test):
     return confusion_matrix(y_test, y_pred)
 
 
-def cross_validation(X, Y, n_splits=10):
-    estimators = [('mlp', KerasClassifier(build_fn=create_model, epochs=1, batch_size=256, verbose=1))]
+def cross_validation(X, Y, n_splits=10, model='simple', epochs=100):
+
+    if model == 'simple':
+        estimators = [('mlp', KerasClassifier(build_fn=create_simple_model, epochs=epochs, batch_size=256, verbose=1))]
+    else:
+        estimators = [('mlp', KerasClassifier(build_fn=create_optimized_model, epochs=epochs, batch_size=256, verbose=1))]
+
     pipeline = Pipeline(estimators)
     kfold = StratifiedKFold(n_splits=n_splits, shuffle=True)
+
     results = cross_validate(pipeline, X, Y, cv=kfold, scoring=['accuracy', 'neg_log_loss'])
 
-    print('Accuracy: %.2f (%.2f%%)' % (results['test_accuracy'].mean(), results['test_accuracy'].std() * 100))
-    print('Log loss: %.2f (%.2f%%)' % (results['test_neg_log_loss'].mean(), results['test_neg_log_loss'].std() * 100))
+    print('Accuracy: %.4f (%.2f%%)' % (results['test_accuracy'].mean(), results['test_accuracy'].std() * 100))
+    print('Log loss: %.4f (%.2f%%)' % (results['test_neg_log_loss'].mean(), results['test_neg_log_loss'].std() * 100))

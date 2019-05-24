@@ -6,9 +6,8 @@ import sklearn
 def main():
     # Get data
     X, Y = get_data()
-    X, Y = get_slim_data()
+    # X, Y = get_slim_data()
 
-    print(sorted(sklearn.metrics.SCORERS.keys()))
     # Create and train model
     # model = create_model()
     # trained_model = train_model(model, x_train, y_train, 150, 256)
@@ -19,7 +18,10 @@ def main():
     # print('Loss & Accuracy: ', result)
     # print('Confusion Matrix:', cm)
 
-    cross_validation(X, Y, 2)
+
+    # cross_validation(X, Y, k, model, epochs)
+
+    cross_validation(X, Y, 5, 'simple', 100)
 
 
 if __name__ == "__main__":
