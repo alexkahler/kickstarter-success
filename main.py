@@ -21,7 +21,7 @@ def main():
     # print('Loss & Accuracy: ', result)
     # print('Confusion Matrix:', cm)
 
-    cross_validation(X, Y, 5)
+    cross_validation(X, Y, 2)
 
 
 if __name__ == "__main__":
