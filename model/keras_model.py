@@ -2,40 +2,60 @@ from keras.models import Sequential
 from keras.layers import Dense, Dropout
 from keras.wrappers.scikit_learn import KerasClassifier
 from sklearn.model_selection import StratifiedKFold, train_test_split
-from sklearn.model_selection import cross_val_score
+from sklearn.model_selection import cross_val_score, cross_validate
 from sklearn.preprocessing import StandardScaler
 from sklearn.metrics import confusion_matrix
 from sklearn.pipeline import Pipeline
-import numpy as np
 import pandas as pd
+from sklearn.metrics import accuracy_score, mean_squared_error
+from sklearn.metrics import make_scorer
 
 
 def get_data():
     X = pd.read_csv('kickstarter_preprocessed_final.csv')
-
     scaler = StandardScaler()
-
     Y = X['state']
     X = X.drop(['state'], axis=1)
-
-    X = pd.DataFrame(scaler.fit_transform((X)), columns=list(X.columns))
-
+    X = pd.DataFrame(scaler.fit_transform(X), columns=list(X.columns))
     x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.20)
+
+    return x_train, y_train, x_test, y_test
+
+
+# state, blurb_length, usd_goal, name_length, campaign_days, staff_pick_False, staff_pick_True,
+
+
+def get_slim_data():
+    X = pd.read_csv('kickstarter_preprocessed_final.csv')
+    scaler = StandardScaler()
+    Y = X['state']
+    X = X.drop(['state'], axis=1)
+    X = X[['blurb_length', 'usd_goal', 'creation_to_launch_hours', 'name_length', 'campaign_days', 'staff_pick_False',
+           'staff_pick_True', 'category_art', 'category_comics', 'category_crafts', 'category_dance', 'category_design',
+           'category_fashion', 'category_film & video',
+           'category_food', 'category_games', 'category_journalism', 'category_music', 'category_photography',
+           'category_publishing', 'category_technology', 'category_theater']]
+    X = pd.DataFrame(scaler.fit_transform(X), columns=list(X.columns))
+    x_train, x_test, y_train, y_test = train_test_split(X, Y, test_size=0.20)
+
+    print(X.head())
 
     return x_train, y_train, x_test, y_test
 
 
 def create_model():
     model = Sequential()
-    model.add(Dense(64, activation='relu', input_dim=83))
-    # model.add(Dropout(0.4))
+    model.add(Dense(32, kernel_initializer='normal', activation='relu', input_dim=22))
+    model.add(Dense(32, kernel_initializer='normal', activation='relu'))
+    model.add(Dropout(0.4))
+    model.add(Dense(32, kernel_initializer='normal', activation='relu'))
     model.add(Dense(1, kernel_initializer='normal', activation='sigmoid'))
     model.compile(loss='binary_crossentropy', optimizer='adam', metrics=['accuracy'])
 
     return model
 
 
-def train_model(model, x_train, y_train, epochs=50, batch_size=25):
+def train_model(model, x_train, y_train, epochs=25, batch_size=25):
     model.fit(x_train, y_train, epochs=epochs, batch_size=batch_size)
 
     return model
@@ -56,9 +76,12 @@ def predict_model(model, x_test, y_test):
 
 def cross_validation(X, Y, n_splits=10):
     print('Running Cross-Valiation')
-    estimators = []
-    estimators.append(('mlp', KerasClassifier(build_fn=create_model, epochs=5, batch_size=5, verbose=1)))
+    scoring = {'accuracy': make_scorer(accuracy_score), 'error': make_scorer(mean_squared_error) } #'neg_mean_squared_error'}
+    estimators = [('mlp', KerasClassifier(build_fn=create_model, epochs=50, batch_size=256, verbose=1))]
+    # estimators.append(('mlp', KerasClassifier(build_fn=create_model, epochs=1, batch_size=256, verbose=1)))
     pipeline = Pipeline(estimators)
     kfold = StratifiedKFold(n_splits=n_splits, shuffle=True)
-    results = cross_val_score(pipeline, X, Y, cv=kfold)
-    print('Results: %.2f%% (%.2f%%)' % (results.mean()*100, results.std()*100))
+    results = cross_validate(pipeline, X, Y, cv=kfold, scoring=['accuracy', 'neg_mean_squared_error'])
+
+    print('Accuracy: %.2f%% (%.2f%%)' % (results['test_accuracy'].mean() * 100, results['test_accuracy'].std() * 100))
+    print('Error: %.2f%% (%.2f%%)' % (results['test_neg_mean_squared_error'].mean() * 100, results['test_neg_mean_squared_error'].std() * 100))
