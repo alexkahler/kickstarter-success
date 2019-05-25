@@ -1,0 +1,1443 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20191.19.0417.1429                               -->
+<workbook source-build='2019.1.3 (20191.19.0417.1429)' source-platform='win' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <SheetIdentifierTracking />
+    <WindowsPersistSimpleIdentifiers />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource caption='Kickstarter.csv (Multiple Connections)' inline='true' name='federated.0s20y1i09rq1qy11655ly0jfiss7' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='Kickstarter' name='textscan.1uyjecu1xzjsi613d6l5f16dzxil'>
+            <connection class='textscan' cleaning='yes' compat='no' csvFile='C:/Users/alexk/Downloads/Kickstarter_2019-04-18T03_20_02_220Z/Kickstarter.csv' dataRefreshTime='' directory='C:/Users/alexk/OneDrive/Dokumenter/Programming/kickstarter-success/Data' filename='Kickstarter.csv' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+          <named-connection caption='Kickstarter001' name='textscan.0ocjxh70bykvdt12kujmj180irjl'>
+            <connection class='textscan' directory='C:/Users/alexk/Downloads/Kickstarter_2019-04-18T03_20_02_220Z' filename='Kickstarter001.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Kickstarter002' name='textscan.0wqua2h1uq9ca41e7fkwt1m1b9rc'>
+            <connection class='textscan' directory='C:/Users/alexk/Downloads/Kickstarter_2019-04-18T03_20_02_220Z' filename='Kickstarter002.csv' password='' server='' />
+          </named-connection>
+          <named-connection caption='Kickstarter003' name='textscan.1eqi4yd135e9nb1f2fmcp0653jwx'>
+            <connection class='textscan' directory='C:/Users/alexk/Downloads/Kickstarter_2019-04-18T03_20_02_220Z' filename='Kickstarter003.csv' password='' server='' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.1uyjecu1xzjsi613d6l5f16dzxil' name='Kickstarter.csv' table='[C:\Users\alexk\Downloads\Kickstarter_2019-04-18T03_20_02_220Z\Kickstarter#csv]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:AK3787:no:A1:AK3787:1' header='yes' locale='da_DK' separator=','>
+            <column datatype='integer' name='backers_count' ordinal='0' />
+            <column datatype='string' name='blurb' ordinal='1' />
+            <column datatype='string' name='category' ordinal='2' />
+            <column datatype='integer' name='converted_pledged_amount' ordinal='3' />
+            <column datatype='string' name='country' ordinal='4' />
+            <column datatype='integer' name='created_at' ordinal='5' />
+            <column datatype='string' name='creator' ordinal='6' />
+            <column datatype='string' name='currency' ordinal='7' />
+            <column datatype='string' name='currency_symbol' ordinal='8' />
+            <column datatype='boolean' name='currency_trailing_code' ordinal='9' />
+            <column datatype='string' name='current_currency' ordinal='10' />
+            <column datatype='integer' name='deadline' ordinal='11' />
+            <column datatype='boolean' name='disable_communication' ordinal='12' />
+            <column datatype='string' name='friends' ordinal='13' />
+            <column datatype='string' name='fx_rate' ordinal='14' />
+            <column datatype='integer' name='goal' ordinal='15' />
+            <column datatype='integer' name='id' ordinal='16' />
+            <column datatype='boolean' name='is_backing' ordinal='17' />
+            <column datatype='boolean' name='is_starrable' ordinal='18' />
+            <column datatype='boolean' name='is_starred' ordinal='19' />
+            <column datatype='integer' name='launched_at' ordinal='20' />
+            <column datatype='string' name='location' ordinal='21' />
+            <column datatype='string' name='name' ordinal='22' />
+            <column datatype='string' name='permissions' ordinal='23' />
+            <column datatype='string' name='photo' ordinal='24' />
+            <column datatype='string' name='pledged' ordinal='25' />
+            <column datatype='string' name='profile' ordinal='26' />
+            <column datatype='string' name='slug' ordinal='27' />
+            <column datatype='string' name='source_url' ordinal='28' />
+            <column datatype='boolean' name='spotlight' ordinal='29' />
+            <column datatype='boolean' name='staff_pick' ordinal='30' />
+            <column datatype='string' name='state' ordinal='31' />
+            <column datatype='integer' name='state_changed_at' ordinal='32' />
+            <column datatype='string' name='static_usd_rate' ordinal='33' />
+            <column datatype='string' name='urls' ordinal='34' />
+            <column datatype='string' name='usd_pledged' ordinal='35' />
+            <column datatype='string' name='usd_type' ordinal='36' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='character-set'>&quot;UTF-8&quot;</attribute>
+              <attribute datatype='string' name='collation'>&quot;da&quot;</attribute>
+              <attribute datatype='string' name='currency'>&quot;kr&quot;</attribute>
+              <attribute datatype='string' name='debit-close-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='debit-open-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='decimal-char'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='field-delimiter'>&quot;,&quot;</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:AK3787:no:A1:AK3787:1&quot;</attribute>
+              <attribute datatype='string' name='header-row'>&quot;true&quot;</attribute>
+              <attribute datatype='string' name='locale'>&quot;da_DK&quot;</attribute>
+              <attribute datatype='string' name='single-char'>&quot;&quot;</attribute>
+              <attribute datatype='string' name='thousands-char'>&quot;.&quot;</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>backers_count</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[backers_count]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>backers_count</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>blurb</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[blurb]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>blurb</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>category</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[category]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>category</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>converted_pledged_amount</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[converted_pledged_amount]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>converted_pledged_amount</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>country</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[country]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>country</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>created_at</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[created_at]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>created_at</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>creator</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[creator]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>creator</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>currency</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[currency]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>currency</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>currency_symbol</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[currency_symbol]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>currency_symbol</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>currency_trailing_code</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[currency_trailing_code]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>currency_trailing_code</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>current_currency</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[current_currency]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>current_currency</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>deadline</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[deadline]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>deadline</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>disable_communication</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[disable_communication]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>disable_communication</remote-alias>
+            <ordinal>12</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>friends</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[friends]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>friends</remote-alias>
+            <ordinal>13</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>fx_rate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[fx_rate]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>fx_rate</remote-alias>
+            <ordinal>14</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>goal</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[goal]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>goal</remote-alias>
+            <ordinal>15</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>id</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[id]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>id</remote-alias>
+            <ordinal>16</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_backing</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_backing]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>is_backing</remote-alias>
+            <ordinal>17</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_starrable</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_starrable]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>is_starrable</remote-alias>
+            <ordinal>18</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>is_starred</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[is_starred]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>is_starred</remote-alias>
+            <ordinal>19</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>launched_at</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[launched_at]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>launched_at</remote-alias>
+            <ordinal>20</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>location</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[location]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>location</remote-alias>
+            <ordinal>21</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>name</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[name]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>name</remote-alias>
+            <ordinal>22</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>permissions</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[permissions]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>permissions</remote-alias>
+            <ordinal>23</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>photo</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[photo]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>photo</remote-alias>
+            <ordinal>24</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>pledged</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[pledged]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>pledged</remote-alias>
+            <ordinal>25</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>profile</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[profile]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>profile</remote-alias>
+            <ordinal>26</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>slug</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[slug]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>slug</remote-alias>
+            <ordinal>27</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>source_url</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[source_url]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>source_url</remote-alias>
+            <ordinal>28</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>spotlight</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[spotlight]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>spotlight</remote-alias>
+            <ordinal>29</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>staff_pick</remote-name>
+            <remote-type>11</remote-type>
+            <local-name>[staff_pick]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>staff_pick</remote-alias>
+            <ordinal>30</ordinal>
+            <local-type>boolean</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[state]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>state</remote-alias>
+            <ordinal>31</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>state_changed_at</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[state_changed_at]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>state_changed_at</remote-alias>
+            <ordinal>32</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>static_usd_rate</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[static_usd_rate]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>static_usd_rate</remote-alias>
+            <ordinal>33</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>urls</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[urls]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>urls</remote-alias>
+            <ordinal>34</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usd_pledged</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usd_pledged]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>usd_pledged</remote-alias>
+            <ordinal>35</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>usd_type</remote-name>
+            <remote-type>129</remote-type>
+            <local-name>[usd_type]</local-name>
+            <parent-name>[Kickstarter.csv]</parent-name>
+            <remote-alias>usd_type</remote-alias>
+            <ordinal>36</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <scale>1</scale>
+            <width>1073741823</width>
+            <contains-null>true</contains-null>
+            <collation flag='0' name='LDA_RDK' />
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='created_at - converted' datatype='date' name='[Calculation_802766692398813186]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(DATEADD(&apos;second&apos;, INT([created_at]), #1970-01-01#))' />
+      </column>
+      <column caption='deadline - converted' datatype='date' name='[Calculation_802766692399001603]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(DATEADD(&apos;second&apos;, INT([deadline]), #1970-01-01#))' />
+      </column>
+      <column caption='launched_at - converted' datatype='date' name='[Calculation_802766692399149060]' role='dimension' type='ordinal'>
+        <calculation class='tableau' formula='DATE(DATEADD(&apos;second&apos;, INT([launched_at]), #1970-01-01#))' />
+      </column>
+      <column caption='State - Failed' datatype='integer' name='[Calculation_802766692403871762]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IIF([state] = &quot;failed&quot;, 1, 0)' />
+      </column>
+      <column caption='State - Successful' datatype='integer' name='[Calculation_802766692404023315]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='IIF([state] = &quot;successful&quot;, 1, 0)' />
+      </column>
+      <column caption='Succeful ratio' datatype='real' name='[Calculation_802766692404785176]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_802766692404023315]) / (SUM([Calculation_802766692404023315]) + SUM([Calculation_802766692403871762]))' />
+      </column>
+      <column datatype='integer' name='[Number of Records]' role='measure' type='quantitative' user:auto-column='numrec'>
+        <calculation class='tableau' formula='1' />
+      </column>
+      <column caption='Failed ratio ' datatype='real' name='[Succeful ratio (copy)]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='SUM([Calculation_802766692403871762]) / (SUM([Calculation_802766692404023315]) + SUM([Calculation_802766692403871762]))' />
+      </column>
+      <column caption='Category - id' datatype='string' name='[category - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0s20y1i09rq1qy11655ly0jfiss7].[category]'>
+        <calculation class='tableau' formula='TRIM( REPLACE(SPLIT( [category], &quot;,&quot;, 1 ), &apos;{&quot;id&quot;:&apos;, &quot;&quot;))' />
+      </column>
+      <column datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+      <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+      <drill-paths>
+        <drill-path name='amount,country,created, pick,state,state' />
+      </drill-paths>
+      <layout dim-ordering='alphabetic' dim-percentage='0.452769' measure-ordering='alphabetic' measure-percentage='0.547231' show-structure='true' />
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;Denmark&quot;' />
+      </semantic-values>
+      <date-options start-of-week='monday' />
+      <filter class='categorical' column='[state]' filter-group='2'>
+        <groupfilter function='union' user:ui-domain='database' user:ui-enumeration='inclusive' user:ui-marker='enumerate'>
+          <groupfilter function='member' level='[state]' member='&quot;failed&quot;' />
+          <groupfilter function='member' level='[state]' member='&quot;successful&quot;' />
+        </groupfilter>
+      </filter>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Avg. Goal'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column-instance column='[goal]' derivation='Avg' name='[avg:goal:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[goal]' role='measure' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[avg:goal:qk]</rows>
+        <cols>[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]</cols>
+      </table>
+      <simple-id uuid='{A9B5359F-E71A-4B87-822C-00AAD1F943F0}' />
+    </worksheet>
+    <worksheet name='Avg. Length of Blurb'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column caption='LEN([blurb])' datatype='integer' name='[Calculation_802766692402892813]' role='measure' type='quantitative' user:unnamed='Sheet 12'>
+              <calculation class='tableau' formula='LEN([blurb])' />
+            </column>
+            <column-instance column='[Calculation_802766692402892813]' derivation='Avg' name='[avg:Calculation_802766692402892813:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[blurb]' role='dimension' type='nominal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[avg:Calculation_802766692402892813:qk]</rows>
+        <cols>[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]</cols>
+      </table>
+      <simple-id uuid='{EE284874-B6E9-42B2-A474-294F7C93A539}' />
+    </worksheet>
+    <worksheet name='Avg. Pledged Amount'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column-instance column='[converted_pledged_amount]' derivation='Avg' name='[avg:converted_pledged_amount:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[converted_pledged_amount]' role='measure' type='quantitative' />
+            <column-instance column='[converted_pledged_amount]' derivation='Median' name='[med:converted_pledged_amount:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+          <pane id='1' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0s20y1i09rq1qy11655ly0jfiss7].[avg:converted_pledged_amount:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0s20y1i09rq1qy11655ly0jfiss7].[med:converted_pledged_amount:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>([federated.0s20y1i09rq1qy11655ly0jfiss7].[avg:converted_pledged_amount:qk] + [federated.0s20y1i09rq1qy11655ly0jfiss7].[med:converted_pledged_amount:qk])</rows>
+        <cols>[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]</cols>
+      </table>
+      <simple-id uuid='{7B75B65B-1266-4423-9025-8BAF1CBCADC6}' />
+    </worksheet>
+    <worksheet name='Backers'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column-instance column='[backers_count]' derivation='Avg' name='[avg:backers_count:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[backers_count]' role='measure' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[avg:backers_count:qk]</rows>
+        <cols>[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]</cols>
+      </table>
+      <simple-id uuid='{16A32FEC-EAD3-4DFC-8EBD-3855D286A123}' />
+    </worksheet>
+    <worksheet name='Count of Projects Launched'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column caption='launched_at - converted' datatype='date' name='[Calculation_802766692399149060]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATEADD(&apos;second&apos;, INT([launched_at]), #1970-01-01#))' />
+            </column>
+            <column-instance column='[state]' derivation='Count' name='[cnt:state:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[launched_at]' role='measure' type='quantitative' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+            <column-instance column='[Calculation_802766692399149060]' derivation='Month-Trunc' name='[tmn:Calculation_802766692399149060:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Line' />
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[cnt:state:qk]</rows>
+        <cols>[federated.0s20y1i09rq1qy11655ly0jfiss7].[tmn:Calculation_802766692399149060:qk]</cols>
+      </table>
+      <simple-id uuid='{323FEAC8-50AA-4A4F-BE80-1EEFA059D97A}' />
+    </worksheet>
+    <worksheet name='Days between Launch and Deadline'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column caption='created_at - converted' datatype='date' name='[Calculation_802766692398813186]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATEADD(&apos;second&apos;, INT([created_at]), #1970-01-01#))' />
+            </column>
+            <column caption='deadline - converted' datatype='date' name='[Calculation_802766692399001603]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATEADD(&apos;second&apos;, INT([deadline]), #1970-01-01#))' />
+            </column>
+            <column caption='[deadline - converted] - [created_at - converted]' datatype='integer' name='[Calculation_802766692401987593]' role='measure' type='quantitative' user:unnamed='Days between Launch and Deadline'>
+              <calculation class='tableau' formula='[Calculation_802766692399001603] - [Calculation_802766692398813186]' />
+            </column>
+            <column-instance column='[Calculation_802766692401987593]' derivation='Avg' name='[avg:Calculation_802766692401987593:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[created_at]' role='measure' type='quantitative' />
+            <column datatype='integer' name='[deadline]' role='measure' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[avg:Calculation_802766692401987593:qk]</rows>
+        <cols>[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]</cols>
+      </table>
+      <simple-id uuid='{7B84ABA2-CCD0-4077-A3B2-D5159BBE88E0}' />
+    </worksheet>
+    <worksheet name='Sheet 7'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column caption='Category - id' datatype='string' name='[category - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0s20y1i09rq1qy11655ly0jfiss7].[category]'>
+              <calculation class='tableau' formula='TRIM( REPLACE(SPLIT( [category], &quot;,&quot;, 1 ), &apos;{&quot;id&quot;:&apos;, &quot;&quot;))' />
+            </column>
+            <column datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column-instance column='[state]' derivation='Count' name='[cnt:state:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[category - Split 1]' derivation='None' name='[none:category - Split 1:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[cnt:state:qk]</rows>
+        <cols>([federated.0s20y1i09rq1qy11655ly0jfiss7].[none:category - Split 1:nk] / [federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk])</cols>
+      </table>
+      <simple-id uuid='{4E46ADCF-5B65-4E25-A4E5-C4ED7B7146EE}' />
+    </worksheet>
+    <worksheet name='Sheet 7 (2)'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column caption='State - Failed' datatype='integer' name='[Calculation_802766692403871762]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IIF([state] = &quot;failed&quot;, 1, 0)' />
+            </column>
+            <column caption='State - Successful' datatype='integer' name='[Calculation_802766692404023315]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='IIF([state] = &quot;successful&quot;, 1, 0)' />
+            </column>
+            <column caption='Succeful ratio' datatype='real' name='[Calculation_802766692404785176]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_802766692404023315]) / (SUM([Calculation_802766692404023315]) + SUM([Calculation_802766692403871762]))' />
+            </column>
+            <column caption='Failed ratio ' datatype='real' name='[Succeful ratio (copy)]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='SUM([Calculation_802766692403871762]) / (SUM([Calculation_802766692404023315]) + SUM([Calculation_802766692403871762]))' />
+            </column>
+            <column caption='Category - id' datatype='string' name='[category - Split 1]' role='dimension' type='nominal' user:SplitFieldIndex='1' user:SplitFieldOrigin='[federated.0s20y1i09rq1qy11655ly0jfiss7].[category]'>
+              <calculation class='tableau' formula='TRIM( REPLACE(SPLIT( [category], &quot;,&quot;, 1 ), &apos;{&quot;id&quot;:&apos;, &quot;&quot;))' />
+            </column>
+            <column datatype='string' name='[category]' role='dimension' type='nominal' />
+            <column-instance column='[category - Split 1]' derivation='None' name='[none:category - Split 1:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+            <column-instance column='[Calculation_802766692404785176]' derivation='User' name='[usr:Calculation_802766692404785176:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Succeful ratio (copy)]' derivation='User' name='[usr:Succeful ratio (copy):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:category - Split 1:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.0s20y1i09rq1qy11655ly0jfiss7].[usr:Calculation_802766692404785176:qk]' shelf='columns' />
+          </shelf-sorts>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+          <pane id='3' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0s20y1i09rq1qy11655ly0jfiss7].[usr:Calculation_802766692404785176:qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#4e79a7' />
+              </style-rule>
+            </style>
+          </pane>
+          <pane id='4' selection-relaxation-option='selection-relaxation-allow' y-axis-name='[federated.0s20y1i09rq1qy11655ly0jfiss7].[usr:Succeful ratio (copy):qk]'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>([federated.0s20y1i09rq1qy11655ly0jfiss7].[usr:Calculation_802766692404785176:qk] + [federated.0s20y1i09rq1qy11655ly0jfiss7].[usr:Succeful ratio (copy):qk])</rows>
+        <cols>[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:category - Split 1:nk]</cols>
+      </table>
+      <simple-id uuid='{1905B8E7-4FE6-4DED-B593-B7BE6B60C168}' />
+    </worksheet>
+    <worksheet name='Sheet 8'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column-instance column='[state]' derivation='Count' name='[cnt:state:qk]' pivot='key' type='quantitative' />
+            <column datatype='string' name='[country]' role='dimension' semantic-role='[Country].[ISO3166_2]' type='nominal' />
+            <column-instance column='[country]' derivation='None' name='[none:country:nk]' pivot='key' type='nominal' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[cnt:state:qk]</rows>
+        <cols>([federated.0s20y1i09rq1qy11655ly0jfiss7].[none:country:nk] / [federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk])</cols>
+      </table>
+      <simple-id uuid='{888CB0CA-905B-41FE-B2E6-1091754FA16C}' />
+    </worksheet>
+    <worksheet name='Sheet 9'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column caption='launched_at - converted' datatype='date' name='[Calculation_802766692399149060]' role='dimension' type='ordinal'>
+              <calculation class='tableau' formula='DATE(DATEADD(&apos;second&apos;, INT([launched_at]), #1970-01-01#))' />
+            </column>
+            <column-instance column='[state]' derivation='Count' name='[cnt:state:qk]' pivot='key' type='quantitative' />
+            <column datatype='integer' name='[launched_at]' role='measure' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+            <column-instance column='[Calculation_802766692399149060]' derivation='Year-Trunc' name='[tyr:Calculation_802766692399149060:ok]' pivot='key' type='ordinal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[cnt:state:qk]</rows>
+        <cols>([federated.0s20y1i09rq1qy11655ly0jfiss7].[tyr:Calculation_802766692399149060:ok] / [federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk])</cols>
+      </table>
+      <simple-id uuid='{ACB91186-AE06-4105-A3A6-46123A31928E}' />
+    </worksheet>
+    <worksheet name='Spotlight'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column-instance column='[spotlight]' derivation='Count' name='[cnt:spotlight:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='boolean' name='[spotlight]' role='dimension' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[cnt:spotlight:qk]</rows>
+        <cols>[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]</cols>
+      </table>
+      <simple-id uuid='{CB08F628-951E-4BF4-B1AE-74F4B7582A69}' />
+    </worksheet>
+    <worksheet name='Staff Picked'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column-instance column='[staff_pick]' derivation='Count' name='[cnt:staff_pick:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='boolean' name='[staff_pick]' role='dimension' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[cnt:staff_pick:qk]</rows>
+        <cols>[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]</cols>
+      </table>
+      <simple-id uuid='{4EE1FAF2-7390-425B-9EFC-226EEA4D2DA3}' />
+    </worksheet>
+    <worksheet name='Successful vs. Failed'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='Kickstarter.csv (Multiple Connections)' name='federated.0s20y1i09rq1qy11655ly0jfiss7' />
+          </datasources>
+          <datasource-dependencies datasource='federated.0s20y1i09rq1qy11655ly0jfiss7'>
+            <column-instance column='[state]' derivation='Count' name='[cnt:state:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[state]' derivation='None' name='[none:state:nk]' pivot='key' type='nominal' />
+            <column datatype='string' name='[state]' role='dimension' semantic-role='' type='nominal' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' value='state'>
+              <formatted-text>
+                <run>state</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' />
+            </encodings>
+          </pane>
+        </panes>
+        <rows>[federated.0s20y1i09rq1qy11655ly0jfiss7].[cnt:state:qk]</rows>
+        <cols>[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]</cols>
+      </table>
+      <simple-id uuid='{26A456CB-FE74-4A0B-B5BC-759E81779D0F}' />
+    </worksheet>
+  </worksheets>
+  <windows source-height='30'>
+    <window class='worksheet' name='Successful vs. Failed'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='186'>
+            <card pane-specification-id='0' param='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E51E0FAC-3493-41CF-8CAB-127914C044BF}' />
+    </window>
+    <window class='worksheet' name='Avg. Goal'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{E9E1AC3B-3933-411B-9273-8355A7AA8E4D}' />
+    </window>
+    <window class='worksheet' name='Backers'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{CABD991E-AA4E-4575-9929-0C3BAFDBE0FF}' />
+    </window>
+    <window class='worksheet' name='Avg. Pledged Amount'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='1' param='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{BF9A16CD-B416-43C0-8664-6C0393D72355}' />
+    </window>
+    <window class='worksheet' name='Spotlight'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{FEC72C78-94CE-4CC5-BBB6-3BD3BC36DAA3}' />
+    </window>
+    <window class='worksheet' name='Staff Picked'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{000B2095-1220-477A-9A2C-7BC9F34E4156}' />
+    </window>
+    <window class='worksheet' name='Sheet 7'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{0DFD9009-7A01-4327-B0C4-6DFE2EB52FF4}' />
+    </window>
+    <window class='worksheet' maximized='true' name='Sheet 7 (2)'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{D037E9DB-7AE9-44F9-9FCA-EE007742F698}' />
+    </window>
+    <window class='worksheet' name='Sheet 8'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{EF64D878-6935-4B34-A254-349CB349BA85}' />
+    </window>
+    <window class='worksheet' name='Sheet 9'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='2' param='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{A355C812-6A96-4093-8A69-F4EEA495D2DA}' />
+    </window>
+    <window class='worksheet' name='Count of Projects Launched'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{3EF12172-0312-481A-9A80-016FBE9400AC}' />
+    </window>
+    <window class='worksheet' name='Days between Launch and Deadline'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{395DAB06-D892-43D9-8CF1-4422DC0A1B70}' />
+    </window>
+    <window class='worksheet' name='Avg. Length of Blurb'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.0s20y1i09rq1qy11655ly0jfiss7].[none:state:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{8D27290A-CE37-432F-A9CC-2638F5453359}' />
+    </window>
+  </windows>
+</workbook>
