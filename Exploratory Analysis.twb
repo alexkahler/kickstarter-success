@@ -15,7 +15,7 @@
       <connection class='federated'>
         <named-connections>
           <named-connection caption='Kickstarter' name='textscan.1uyjecu1xzjsi613d6l5f16dzxil'>
-            <connection class='textscan' cleaning='yes' compat='no' csvFile='C:/Users/alexk/Downloads/Kickstarter_2019-04-18T03_20_02_220Z/Kickstarter.csv' dataRefreshTime='' directory='C:/Users/alexk/Downloads/Kickstarter_2019-04-18T03_20_02_220Z' filename='C:/Users/alexk/AppData/Local/Temp/TableauTemp/0123r8u1hk3ur219v8vpc0ethf0d/Kickstarter.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+            <connection class='textscan' cleaning='yes' compat='no' csvFile='C:/Users/alexk/Downloads/Kickstarter_2019-04-18T03_20_02_220Z/Kickstarter.csv' dataRefreshTime='' directory='C:/Users/alexk/OneDrive/Dokumenter/Programming/kickstarter-success/Data' filename='Kickstarter.csv' interpretationMode='8' password='' server='' validate='no' />
           </named-connection>
           <named-connection caption='Kickstarter001' name='textscan.0ocjxh70bykvdt12kujmj180irjl'>
             <connection class='textscan' directory='C:/Users/alexk/Downloads/Kickstarter_2019-04-18T03_20_02_220Z' filename='Kickstarter001.csv' password='' server='' />
@@ -1082,7 +1082,7 @@
     </worksheet>
   </worksheets>
   <windows source-height='30'>
-    <window class='worksheet' name='Successful vs. Failed'>
+    <window class='worksheet' maximized='true' name='Successful vs. Failed'>
       <cards>
         <edge name='left'>
           <strip size='160'>
@@ -1500,7 +1500,7 @@
       </viewpoint>
       <simple-id uuid='{395DAB06-D892-43D9-8CF1-4422DC0A1B70}' />
     </window>
-    <window class='worksheet' maximized='true' name='Avg. Length of Blurb'>
+    <window class='worksheet' name='Avg. Length of Blurb'>
       <cards>
         <edge name='left'>
           <strip size='160'>
